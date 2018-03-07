@@ -17,10 +17,6 @@ services:
   - sqlite 
   
 build:
-  pre_ci_boot:
-    image_name: drydock/u16all
-    image_tag: v6.2.4
-    pull: true
     
   ci:
     - python --version    
