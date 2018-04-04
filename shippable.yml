@@ -10,8 +10,7 @@ services:
   - neo4j 
   - postgres 
   - rabbitmq 
-  - redis 
-  - rethinkdb 
+  - redis  
   - riak 
   - selenium 
   - sqlite 
