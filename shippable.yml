@@ -44,3 +44,13 @@ build:
     - which mysql
     - mysql -V #|| true
     - which sqlite3 #|| true
+    
+    - docker pull shippabledocker/sample_node_pvt:ecr
+    
+integrations:
+    
+  hub:
+ #Docker integration
+    - integrationName: ship-docker
+      type: dockerRegistryLogin
+
