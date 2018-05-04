@@ -47,8 +47,6 @@ build:
     
     - docker pull shippabledocker/sample_node_pvt:ecr
     
-    - curl localhost:15672
-    
 integrations:
     
   hub:
