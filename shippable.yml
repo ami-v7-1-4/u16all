@@ -46,7 +46,7 @@ build:
     - which sqlite3 #|| true
     
     - docker pull shippabledocker/sample_node_pvt:ecr
-    - nc -vz localhost 5672
+    
 integrations:
     
   hub:
