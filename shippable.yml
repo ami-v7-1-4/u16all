@@ -53,7 +53,6 @@ build:
     - elasticsearch --version
     - sleep 5
     - curl http://127.0.0.1:5984
-    - pip show pycrypto
     
     - docker pull shippabledocker/sample_node_pvt:ecr
     
