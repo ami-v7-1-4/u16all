@@ -14,12 +14,17 @@ services:
   - riak 
   - selenium 
   - sqlite 
-  
+
+runtime:
+  - nodePool: default_node_pool
+  - nodePool: dynamic__x86_64__CentOS_7__c4_large
+  - nodePool: dynamic__x86_64__Ubuntu_14_04__c4_large
+
 build:
-  pre_ci_boot:
-    image_name: drydock/u16all
-    image_tag: master
-    pull: true
+#  pre_ci_boot:
+ #   image_name: drydock/u16all
+ #   image_tag: master
+ #   pull: true
     
   ci:
    # - echo SHIPPABLE_CASSANDRA_BINARY=$SHIPPABLE_CASSANDRA_BINARY
