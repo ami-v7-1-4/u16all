@@ -52,7 +52,8 @@ build:
     - psql --version
     - redis-server --version
     #- /var/lib/neo4j/bin/neo4j version
-    - dpkg -s rabbitmq-server | grep Version
+    #- dpkg -s rabbitmq-server | grep Version
+    - yum list rabbitmq-server | grep rabbitmq-serve
     - mongod --version
     - elasticsearch --version
     - sleep 5
