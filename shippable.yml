@@ -20,6 +20,10 @@ runtime:
   - nodePool: dynamic__x86_64__CentOS_7__c4_large
   - nodePool: dynamic__x86_64__Ubuntu_14_04__c4_large
 
+matrix:
+  allow_failures:
+    - nodePool: dynamic__x86_64__CentOS_7__c4_large
+    
 build:
   #pre_ci_boot:
    # image_name: drydock/u16all
@@ -52,8 +56,8 @@ build:
     - psql --version
     - redis-server --version
     #- /var/lib/neo4j/bin/neo4j version
-    #- dpkg -s rabbitmq-server | grep Version
-    - yum list rabbitmq-server | grep rabbitmq-serve
+    - dpkg -s rabbitmq-server | grep Version
+    #- yum list rabbitmq-server | grep rabbitmq-serve #for c7all rabbitmq version
     - mongod --version
     - elasticsearch --version
     - sleep 5
